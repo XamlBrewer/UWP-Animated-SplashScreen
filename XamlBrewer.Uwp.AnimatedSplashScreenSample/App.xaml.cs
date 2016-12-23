@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -14,6 +15,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Mvvm.Services;
+using XamlBrewer.Uwp.Controls;
 
 namespace XamlBrewer.Uwp.AnimatedSplashScreenSample
 {
@@ -39,12 +42,7 @@ namespace XamlBrewer.Uwp.AnimatedSplashScreenSample
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-#if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
-            {
-                this.DebugSettings.EnableFrameRateCounter = true;
-            }
-#endif
+            Theme.ApplyToContainer();
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
@@ -69,10 +67,9 @@ namespace XamlBrewer.Uwp.AnimatedSplashScreenSample
             {
                 if (rootFrame.Content == null)
                 {
-                    // When the navigation stack isn't restored navigate to the first page,
-                    // configuring the new page by passing required information as a navigation
-                    // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    var shell = new Shell();
+                    rootFrame.Content = shell;
+                    shell.OpenFromSplashScreen(e.SplashScreen.ImageLocation, Colors.LightSlateGray);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();

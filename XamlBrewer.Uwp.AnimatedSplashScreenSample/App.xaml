@@ -2,7 +2,9 @@
     x:Class="XamlBrewer.Uwp.AnimatedSplashScreenSample.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:XamlBrewer.Uwp.AnimatedSplashScreenSample"
     RequestedTheme="Light">
-
+    <Application.Resources>
+        <!-- Theme resources -->
+        <ResourceDictionary Source="Services/Theming/Theme.xaml" />
+    </Application.Resources>
 </Application>

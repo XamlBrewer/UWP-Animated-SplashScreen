@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Theme Resources -->
+
+    <!-- Header -->
+    <SolidColorBrush x:Key="TitlebarBackgroundBrush"
+                     Color="MediumSlateBlue" />
+    <SolidColorBrush x:Key="StatusbarBackgroundBrush"
+                     Color="{ThemeResource SystemColorHighlightColor}" />
+    <!-- Splitview Pane -->
+    <SolidColorBrush x:Key="SplitViewBackgroundBrush"
+                     Color="Peru" />
+    <SolidColorBrush x:Key="SplitViewForegroundBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="SplitViewHighlightBrush"
+                     Color="Gold" />
+
+    <!-- Splitview Content -->
+    <SolidColorBrush x:Key="PageBackgroundBrush"
+                     Color="Gainsboro" />
+    <SolidColorBrush x:Key="PageForegroundBrush"
+                     Color="#69969C" />
+</ResourceDictionary>
