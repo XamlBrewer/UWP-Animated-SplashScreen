@@ -94,15 +94,18 @@
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid Background="Black">
+                <Grid Background="{StaticResource PageBackgroundBrush}">
                     <!-- Navigation Frame -->
                     <Frame x:Name="SplitViewFrame"
                            Padding="0 0 0 0">
+
                         <Frame.ContentTransitions>
                             <TransitionCollection>
                                 <NavigationThemeTransition>
                                     <NavigationThemeTransition.DefaultNavigationTransitionInfo>
-                                        <EntranceNavigationTransitionInfo />
+                                        <!--<SlideNavigationTransitionInfo />-->
+                                        <!--<EntranceNavigationTransitionInfo />-->
+                                        <DrillInNavigationTransitionInfo />
                                     </NavigationThemeTransition.DefaultNavigationTransitionInfo>
                                 </NavigationThemeTransition>
                             </TransitionCollection>
