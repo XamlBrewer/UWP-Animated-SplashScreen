@@ -13,9 +13,19 @@ namespace XamlBrewer.Uwp.Controls
     {
         private static Page currentPage;
 
+        public static void OpenFromSplashScreen(this Page page, Rect imageBounds)
+        {
+            page.OpenFromSplashScreen(imageBounds, Colors.Transparent, new Uri("ms-appx:///Assets/SplashScreen.png"));
+        }
+
         public static void OpenFromSplashScreen(this Page page, Rect imageBounds, Color backgroundColor)
         {
             page.OpenFromSplashScreen(imageBounds, backgroundColor, new Uri("ms-appx:///Assets/SplashScreen.png"));
+        }
+
+        public static void OpenFromSplashScreen(this Page page, Rect imageBounds, Uri uri)
+        {
+            page.OpenFromSplashScreen(imageBounds, Colors.Transparent, uri);
         }
 
         public static void OpenFromSplashScreen(this Page page, Rect imageBounds, Color backgroundColor, Uri uri)

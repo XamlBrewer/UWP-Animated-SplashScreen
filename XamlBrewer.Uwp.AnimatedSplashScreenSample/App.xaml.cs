@@ -69,7 +69,7 @@ namespace XamlBrewer.Uwp.AnimatedSplashScreenSample
                 {
                     var shell = new Shell();
                     rootFrame.Content = shell;
-                    shell.OpenFromSplashScreen(e.SplashScreen.ImageLocation, Colors.LightSlateGray);
+                    shell.OpenFromSplashScreen(e.SplashScreen.ImageLocation);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
