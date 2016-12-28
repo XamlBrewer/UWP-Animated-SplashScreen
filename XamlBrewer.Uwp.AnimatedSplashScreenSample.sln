@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlBrewer.Uwp.AnimatedSpla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlBrewer.Uwp.AnimatedSplashScreen", "XamlBrewer.Uwp.AnimatedSplashScreen\XamlBrewer.Uwp.AnimatedSplashScreen.csproj", "{FBC8F2E9-4397-420B-BEDF-068060EF08B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{5BA3754C-37F2-4A90-B9D6-E3533F5CC269}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.png = nuget.png
+		XamlBrewer.Uwp.AnimatedSplashScreen.nuspec = XamlBrewer.Uwp.AnimatedSplashScreen.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

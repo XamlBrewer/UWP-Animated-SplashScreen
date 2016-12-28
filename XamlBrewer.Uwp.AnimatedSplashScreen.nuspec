@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>XamlBrewer.Uwp.AnimatedSplashScreen</id>
+    <version>1.0.0.0</version>
+    <authors>Diederik Krols</authors>
+    <owners>xamlbrewer</owners>
+    <projectUrl>https://github.com/XamlBrewer/UWP-Animated-SplashScreen</projectUrl>
+    <iconUrl>https://github.com/XamlBrewer/UWP-Animated-SplashScreen/blob/master/nuget.png?raw=true</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A UWP SplashScreen animation by the Composition API.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>© XAMLBrewer. All rights reserved.</copyright>
+    <tags>UWP XAML Composition Animation Splash</tags>
+    <dependencies>
+      <group targetFramework="uap10.0">
+        <dependency id="System.Diagnostics.Debug" version="4.0.10" />
+        <dependency id="System.Linq" version="4.0.0" />
+        <dependency id="System.Numerics.Vectors" version="4.1.0" />
+        <dependency id="System.Runtime" version="4.0.20" />
+        <dependency id="System.Runtime.Extensions" version="4.0.10" />
+        <dependency id="System.Runtime.InteropServices.WindowsRuntime" version="4.0.0" />
+        <dependency id="System.Runtime.WindowsRuntime" version="4.0.10" />
+        <dependency id="System.Threading" version="4.0.10" />
+        <dependency id="System.Threading.Tasks" version="4.0.10" />
+        <dependency id="Win2D.uwp" version="1.20.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src=".\XamlBrewer.Uwp.AnimatedSplashScreen\bin\Release\XamlBrewer.Uwp.AnimatedSplashScreen.dll" target="lib\uap10.0" />
+    <file src=".\XamlBrewer.Uwp.AnimatedSplashScreen\bin\Release\XamlBrewer.Uwp.AnimatedSplashScreen.pdb" target="lib\uap10.0" />
+    <file src=".\XamlBrewer.Uwp.AnimatedSplashScreen\bin\Release\XamlBrewer.Uwp.AnimatedSplashScreen.pri" target="lib\uap10.0" />
+  </files>
+</package>

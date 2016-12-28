@@ -114,14 +114,14 @@
 
                     <!-- SplitViewOpener -->
                     <!-- Comment out when it blocks the UI -->
-                    <!--<Grid ManipulationMode="TranslateX"
+                    <Grid ManipulationMode="TranslateX"
                           ManipulationCompleted="SplitViewOpener_ManipulationCompleted"
                           Width="120"
                           Margin="0"
                           Background="Transparent"
                           HorizontalAlignment="Left"
                           VerticalAlignment="Stretch">
-                    </Grid>-->
+                    </Grid>
                 </Grid>
             </SplitView.Content>
         </SplitView>
