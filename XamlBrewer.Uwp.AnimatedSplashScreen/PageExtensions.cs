@@ -9,26 +9,56 @@ using Windows.UI.Xaml.Hosting;
 
 namespace XamlBrewer.Uwp.Controls
 {
+    /// <summary>
+    /// Class PageExtensions.
+    /// </summary>
     public static class PageExtensions
     {
+        /// <summary>
+        /// The current page
+        /// </summary>
         private static Page currentPage;
 
+        /// <summary>
+        /// Opens from splash screen.
+        /// </summary>
+        /// <param name="page">The page.</param>
+        /// <param name="imageBounds">The image bounds.</param>
         public static void OpenFromSplashScreen(this Page page, Rect imageBounds)
         {
             page.OpenFromSplashScreen(imageBounds, Colors.Transparent, new Uri("ms-appx:///Assets/SplashScreen.png"));
         }
 
+        /// <summary>
+        /// Opens from splash screen.
+        /// </summary>
+        /// <param name="page">The page.</param>
+        /// <param name="imageBounds">The image bounds.</param>
+        /// <param name="backgroundColor">Color of the background.</param>
         public static void OpenFromSplashScreen(this Page page, Rect imageBounds, Color backgroundColor)
         {
             page.OpenFromSplashScreen(imageBounds, backgroundColor, new Uri("ms-appx:///Assets/SplashScreen.png"));
         }
 
-        public static void OpenFromSplashScreen(this Page page, Rect imageBounds, Uri uri)
+        /// <summary>
+        /// Opens from splash screen.
+        /// </summary>
+        /// <param name="page">The page.</param>
+        /// <param name="imageBounds">The image bounds.</param>
+        /// <param name="imageUri">The URI of the image.</param>
+        public static void OpenFromSplashScreen(this Page page, Rect imageBounds, Uri imageUri)
         {
-            page.OpenFromSplashScreen(imageBounds, Colors.Transparent, uri);
+            page.OpenFromSplashScreen(imageBounds, Colors.Transparent, imageUri);
         }
 
-        public static void OpenFromSplashScreen(this Page page, Rect imageBounds, Color backgroundColor, Uri uri)
+        /// <summary>
+        /// Opens from splash screen.
+        /// </summary>
+        /// <param name="page">The page.</param>
+        /// <param name="imageBounds">The image bounds.</param>
+        /// <param name="backgroundColor">Color of the background.</param>
+        /// <param name="imageUri">The URI of the image.</param>
+        public static void OpenFromSplashScreen(this Page page, Rect imageBounds, Color backgroundColor, Uri imageUri)
         {
             page.Loaded += Page_Loaded;
 
@@ -36,9 +66,14 @@ namespace XamlBrewer.Uwp.Controls
             SurfaceLoader.Initialize(ElementCompositionPreview.GetElementVisual(page).Compositor);
 
             // Show the custome splash screen
-            ShowImage(page, imageBounds, uri, backgroundColor);
+            ShowImage(page, imageBounds, imageUri, backgroundColor);
         }
 
+        /// <summary>
+        /// Called when the page is loaded.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="Windows.UI.Xaml.RoutedEventArgs" /> instance containing the event data.</param>
         private static void Page_Loaded(object sender, RoutedEventArgs e)
         {
             (sender as Page).Loaded -= Page_Loaded;
@@ -47,6 +82,13 @@ namespace XamlBrewer.Uwp.Controls
             ShowContent(sender as Page);
         }
 
+        /// <summary>
+        /// Shows the image.
+        /// </summary>
+        /// <param name="page">The page.</param>
+        /// <param name="imageBounds">The image bounds.</param>
+        /// <param name="imageUri">The image URI.</param>
+        /// <param name="backgroundColor">Color of the background.</param>
         private static async void ShowImage(Page page, Rect imageBounds, Uri imageUri, Color backgroundColor)
         {
             var compositor = ElementCompositionPreview.GetElementVisual(page).Compositor;
@@ -81,6 +123,10 @@ namespace XamlBrewer.Uwp.Controls
             container.Children.InsertAtTop(imageSprite);
         }
 
+        /// <summary>
+        /// Shows the content.
+        /// </summary>
+        /// <param name="page">The page.</param>
         private static void ShowContent(Page page)
         {
             var container = (ContainerVisual)ElementCompositionPreview.GetElementChildVisual(page);
@@ -129,6 +175,11 @@ namespace XamlBrewer.Uwp.Controls
             batch.End();
         }
 
+        /// <summary>
+        /// Called when all animations in the scoped batch are completed.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="args">The <see cref="Windows.UI.Composition.CompositionBatchCompletedEventArgs" /> instance containing the event data.</param>
         private static void Batch_Completed(object sender, CompositionBatchCompletedEventArgs args)
         {
             // Now that the animations are complete, dispose of the custom Splash Screen visuals
