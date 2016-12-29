@@ -17,7 +17,7 @@ Add the call to _OpenFromSplashScreen()_ in the _OnLaunched_ event handler:
 if (rootFrame.Content == null)
 {
   rootFrame.Navigate(typeof(Shell), e.Arguments);
-  **(rootFrame.Content as Page).OpenFromSplashScreen(e.SplashScreen.ImageLocation);**  
+  (rootFrame.Content as Page).OpenFromSplashScreen(e.SplashScreen.ImageLocation);  
 }                
 ```
 
