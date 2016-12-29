@@ -157,12 +157,6 @@
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\XamlBrewer.Uwp.AnimatedSplashScreen\XamlBrewer.Uwp.AnimatedSplashScreen.csproj">
-      <Project>{fbc8f2e9-4397-420b-bedf-068060ef08b2}</Project>
-      <Name>XamlBrewer.Uwp.AnimatedSplashScreen</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -8,6 +8,7 @@
     <projectUrl>https://github.com/XamlBrewer/UWP-Animated-SplashScreen</projectUrl>
     <iconUrl>https://github.com/XamlBrewer/UWP-Animated-SplashScreen/blob/master/nuget.png?raw=true</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <title>SplashScreen animation for UWP</title>
     <description>A UWP SplashScreen animation by the Composition API.</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>© XAMLBrewer. All rights reserved.</copyright>
