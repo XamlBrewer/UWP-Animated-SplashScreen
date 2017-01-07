@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -68,7 +69,11 @@ namespace XamlBrewer.Uwp.AnimatedSplashScreenSample
                 if (rootFrame.Content == null)
                 {
                     rootFrame.Navigate(typeof(Shell), e.Arguments);
+                    Task.Delay(1000).Wait();
                     (rootFrame.Content as Page).OpenFromSplashScreen(e.SplashScreen.ImageLocation);
+
+                    // Example of providing another image, and setting a background color for a transparent image:
+                    // (rootFrame.Content as Page).OpenFromSplashScreen(e.SplashScreen.ImageLocation, Colors.Black, new Uri("ms-appx:///Assets/ToolkitLogoTransparent.png"));
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();

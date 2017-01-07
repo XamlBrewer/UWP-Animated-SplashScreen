@@ -121,6 +121,7 @@
   <ItemGroup>
     <Content Include="Assets\Images\lego_dimensions_doctor_who-8.jpg" />
     <Content Include="Assets\Images\lego_dimensions_doctor_who-9.jpg" />
+    <Content Include="Assets\ToolkitLogoTransparent.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
