@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Numerics;
 using Windows.Foundation;
 using Windows.UI;
@@ -19,6 +20,8 @@ namespace XamlBrewer.Uwp.Controls
         /// </summary>
         private static Page currentPage;
 
+        private static float ScaleFactor;
+        
         /// <summary>
         /// Opens from splash screen.
         /// </summary>
@@ -60,6 +63,8 @@ namespace XamlBrewer.Uwp.Controls
         /// <param name="imageUri">The URI of the image.</param>
         public static void OpenFromSplashScreen(this Page page, Rect imageBounds, Color backgroundColor, Uri imageUri)
         {
+            ScaleFactor = (float)DisplayInformation.GetForCurrentView().RawPixelsPerViewPixel;
+            
             page.Loaded += Page_Loaded;
 
             // Initialize the surface loader
@@ -119,7 +124,7 @@ namespace XamlBrewer.Uwp.Controls
             var imageSprite = compositor.CreateSpriteVisual();
             imageSprite.Brush = compositor.CreateSurfaceBrush(surface);
             imageSprite.Offset = new Vector3((float)imageBounds.X, (float)imageBounds.Y, 0f);
-            imageSprite.Size = new Vector2((float)imageBounds.Width, (float)imageBounds.Height);
+            imageSprite.Size = new Vector2((float)imageBounds.Width / ScaleFactor, (float)imageBounds.Height / ScaleFactor);
             container.Children.InsertAtTop(imageSprite);
         }
 
