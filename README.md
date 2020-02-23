@@ -1,14 +1,14 @@
 # UWP-Animated-SplashScreen
 
-##Sample
-![Splash Screen Animation] (https://github.com/XamlBrewer/UWP-Animated-SplashScreen/blob/master/AnimatedSplashScreen.gif)
+## Sample
+![Splash Screen Animation](https://github.com/XamlBrewer/UWP-Animated-SplashScreen/blob/master/AnimatedSplashScreen.gif)
 
-##NuGet
+## NuGet
 To install SplashScreen animation for UWP, run the following command in the Package Manager Console
 
 PM> `Install-Package XamlBrewer.Uwp.AnimatedSplashScreen`
 
-##Usage
+## Usage
 Add the following statement on top of your _App.xaml.cs_ file:
 ```cs
 using XamlBrewer.Uwp.Controls;
@@ -26,5 +26,5 @@ if (rootFrame.Content == null)
 
 Use one of the overloads to provide a specific image, and/or background color.
 
-##Credits
+## Credits
 The original code was written by the Composition Team as part of the [Windows UI Dev Labs](https://github.com/Microsoft/WindowsUIDevLabs). I just simplified it, made it a bit more generic and reusable, and packaged it.
